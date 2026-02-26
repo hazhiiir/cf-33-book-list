@@ -14,7 +14,6 @@ export default function Select({ id, options, label, value, onChange }) {
         onChange={onChange}
       >
         {options &&
-          options.length &&
           options.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}
