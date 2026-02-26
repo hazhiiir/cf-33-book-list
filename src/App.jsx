@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -9,6 +10,7 @@ function App() {
         similique, sapiente veniam molestias corporis quasi provident nobis
         reiciendis veritatis doloremque? Blanditiis, eveniet odio.
       </p>
+      <Footer />
     </>
   );
 }
