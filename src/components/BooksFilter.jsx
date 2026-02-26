@@ -18,6 +18,13 @@ export default function BooksFilter({ onChange }) {
     }
   };
 
+  const reset = () => {
+    setState({ search: "", sort: "downloads", filter: "" });
+    if (onChange) {
+      onChange({ search: "", sort: "downloads", filter: "" });
+    }
+  };
+
   return (
     <section id="controls" className="bg-white rounded-xl shadow-book p-6 mb-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -84,6 +91,7 @@ export default function BooksFilter({ onChange }) {
         <button
           id="clear-filters-btn"
           className="px-4 py-2 text-sepia-600 hover:text-sepia-800 hover:bg-sepia-100 rounded-lg transition-all flex items-center gap-2 font-medium"
+          onClick={reset}
         >
           <svg
             className="h-4 w-4"
